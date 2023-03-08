@@ -41,6 +41,8 @@ describe('<FeelEditor>', function() {
     editor.focus();
     fireEvent.keyDown(document.activeElement, { key: ' ', ctrlKey: true });
 
+    console.log('should supply variables to editor', editor === document.activeElement);
+
     // then
     let suggestions;
     await waitFor(() => {
